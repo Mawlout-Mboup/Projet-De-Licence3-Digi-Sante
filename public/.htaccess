@@ -1,0 +1,91 @@
+# ============================================================
+# DIGI-SANTE
+# Fichier .htaccess
+# Architecture MVC
+# ============================================================
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+# ------------------------------------------------------------
+# Si le fichier ou dossier existe, ne rien réécrire
+# ------------------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# ------------------------------------------------------------
+# Toutes les autres requêtes passent par index.php
+# ------------------------------------------------------------
+
+RewriteRule ^ index.php [QSA,L]
+
+</IfModule>
+
+# ============================================================
+# Protection des fichiers sensibles
+# ============================================================
+
+<Files ".env">
+    Require all denied
+</Files>
+
+<Files "composer.json">
+    Require all denied
+</Files>
+
+<Files "README.md">
+    Require all denied
+</Files>
+
+# ============================================================
+# Désactiver l'affichage du contenu des dossiers
+# ============================================================
+
+Options All -Indexes
+
+# ============================================================
+# Compression (si disponible)
+# ============================================================
+
+<IfModule mod_deflate.c>
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/json
+
+</IfModule>
+
+# ============================================================
+# Cache navigateur
+# ============================================================
+
+<IfModule mod_expires.c>
+
+ExpiresActive On
+
+ExpiresByType text/css "access plus 7 days"
+
+ExpiresByType application/javascript "access plus 7 days"
+
+ExpiresByType image/png "access plus 30 days"
+
+ExpiresByType image/jpeg "access plus 30 days"
+
+ExpiresByType image/gif "access plus 30 days"
+
+ExpiresByType image/webp "access plus 30 days"
+
+</IfModule>
+
+# ============================================================
+# Sécurité
+# ============================================================
+
+ServerSignature Off

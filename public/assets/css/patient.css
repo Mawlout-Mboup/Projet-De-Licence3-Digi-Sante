@@ -1,0 +1,4 @@
+.patient-page .profile-card,
+.patient-page .detail-list {
+    min-width: 0;
+}

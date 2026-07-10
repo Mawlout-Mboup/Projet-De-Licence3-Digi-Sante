@@ -78,7 +78,7 @@ ds_app_start('Historique des diagnostics', count($diagnostics) . ' diagnostics m
                             <a href="<?= BASE_URL ?>/diagnostic/edit?id=<?= (int) ($diagnostic['id'] ?? 0) ?>" aria-label="Modifier">
                                 <i class="fa-regular fa-pen-to-square"></i>
                             </a>
-                            <a href="<?= BASE_URL ?>/diagnostic/show?id=<?= (int) ($diagnostic['id'] ?? 0) ?>" aria-label="Archiver">
+                            <a href="<?= BASE_URL ?>/diagnostic/archive?id=<?= (int) ($diagnostic['id'] ?? 0) ?>" aria-label="Archiver">
                                 <i class="fa-solid fa-box-archive"></i>
                             </a>
                         </div>

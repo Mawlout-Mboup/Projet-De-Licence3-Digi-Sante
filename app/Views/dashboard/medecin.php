@@ -24,7 +24,7 @@ ds_app_start('Centre de surveillance', 'MED-0001 - Supervision en direct', $acti
     <a href="<?= BASE_URL ?>/alertes"><i class="fa-regular fa-bell"></i> Alertes</a>
     <a href="<?= BASE_URL ?>/diagnostic/create"><i class="fa-regular fa-clipboard"></i> Nouveau diagnostic</a>
     <a href="<?= BASE_URL ?>/rapports"><i class="fa-regular fa-file-pdf"></i> Rapports PDF</a>
-    <a href="<?= BASE_URL ?>/dashboard"><i class="fa-solid fa-chart-line"></i> Statistiques</a>
+    <a href="<?= BASE_URL ?>/statistiques"><i class="fa-solid fa-chart-line"></i> Statistiques</a>
 </nav>
 
 <section class="metrics-grid">

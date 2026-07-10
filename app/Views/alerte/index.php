@@ -63,10 +63,10 @@ ds_app_start('Gestion des alertes', count($alertes) . ' alertes cliniques', $act
                                 <a href="<?= BASE_URL ?>/alerte/show?id=<?= (int) ($alerte['id'] ?? 0) ?>" aria-label="Voir">
                                     <i class="fa-regular fa-eye"></i>
                                 </a>
-                                <a href="<?= BASE_URL ?>/alerte/edit?id=<?= (int) ($alerte['id'] ?? 0) ?>" aria-label="Prendre en charge">
+                                <a href="<?= BASE_URL ?>/alerte/prendre-en-charge?id=<?= (int) ($alerte['id'] ?? 0) ?>" aria-label="Prendre en charge">
                                     <i class="fa-solid fa-hand-holding-medical"></i>
                                 </a>
-                                <a href="<?= BASE_URL ?>/alerte/show?id=<?= (int) ($alerte['id'] ?? 0) ?>" aria-label="Resoudre">
+                                <a href="<?= BASE_URL ?>/alerte/resoudre?id=<?= (int) ($alerte['id'] ?? 0) ?>" aria-label="Resoudre">
                                     <i class="fa-regular fa-circle-check"></i>
                                 </a>
                             </div>

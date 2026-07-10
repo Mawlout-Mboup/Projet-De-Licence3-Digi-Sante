@@ -148,6 +148,24 @@ class AuthController extends Controller
         }
     }
 
+    public function forgotPassword(): void
+    {
+        if ($this->auth()) {
+            $this->redirect($this->dashboardPathForRole());
+        }
+
+        $message = '';
+
+        if ($this->isPost()) {
+            $message = "Votre demande a ete envoyee. L'equipe administratrice vous contactera pour securiser le compte.";
+        }
+
+        $this->view('auth/forgot-password', [
+            'title' => 'Mot de passe oublie',
+            'message' => $message
+        ]);
+    }
+
     public function register(): void
     {
         $this->showRegister(2);

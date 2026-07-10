@@ -7,14 +7,26 @@
     .hero-buttons,
     .quick-tabs,
     .profile-actions,
+    .landing-actions,
+    .auth-actions,
     .action-links {
         flex-wrap: wrap;
     }
 
     .topbar-actions > *,
     .hero-buttons > *,
-    .profile-actions > * {
+    .profile-actions > *,
+    .landing-actions > *,
+    .auth-actions > * {
         max-width: 100%;
+    }
+
+    .btn,
+    .btn-primary,
+    .btn-secondary,
+    .btn-soft,
+    .btn-ghost {
+        min-width: 0;
     }
 
     .panel-header {
@@ -41,12 +53,31 @@
     .btn-secondary,
     .btn-soft,
     .btn-ghost {
+        box-sizing: border-box;
         width: 100%;
         min-width: 0;
+        justify-content: center;
+        line-height: 1.2;
+        text-align: center;
         white-space: normal;
+        overflow-wrap: anywhere;
     }
 
-    .quick-tabs a {
+    .topbar-actions,
+    .hero-buttons,
+    .quick-tabs,
+    .profile-actions,
+    .landing-actions,
+    .auth-actions {
+        width: 100%;
+    }
+
+    .topbar-actions > *,
+    .hero-buttons > *,
+    .quick-tabs a,
+    .profile-actions > *,
+    .landing-actions > *,
+    .auth-actions > * {
         width: 100%;
         justify-content: center;
     }

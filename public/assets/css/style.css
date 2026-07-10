@@ -62,16 +62,23 @@ textarea {
 .btn-primary,
 .btn-secondary,
 .btn-soft {
+    box-sizing: border-box;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    max-width: 100%;
     min-height: 44px;
     padding: 12px 20px;
     border: 0;
     border-radius: 16px;
     cursor: pointer;
     font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    overflow-wrap: anywhere;
     transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
 }
 
@@ -567,7 +574,7 @@ textarea {
 
 .table-toolbar {
     display: grid;
-    grid-template-columns: 1fr 140px 180px auto;
+    grid-template-columns: minmax(180px, 1fr) minmax(130px, 140px) minmax(150px, 180px) max-content;
     gap: 12px;
     padding: 18px 20px;
     border-bottom: 1px solid #e5eee9;
@@ -617,6 +624,7 @@ tbody tr:hover {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: nowrap;
     white-space: nowrap;
 }
 
@@ -996,6 +1004,13 @@ textarea:focus {
 
     .table-toolbar {
         grid-template-columns: 1fr;
+    }
+
+    .table-toolbar .btn,
+    .table-toolbar .btn-primary,
+    .table-toolbar .btn-secondary,
+    .table-toolbar .btn-soft {
+        width: 100%;
     }
 
     .table-panel {

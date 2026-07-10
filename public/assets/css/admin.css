@@ -1,0 +1,4 @@
+.admin-page .metric-card,
+.admin-page .panel {
+    min-width: 0;
+}

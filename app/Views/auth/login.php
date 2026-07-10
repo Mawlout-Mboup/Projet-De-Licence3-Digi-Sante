@@ -67,7 +67,7 @@ $selectedRole = (int) ($selectedRole ?? 2);
                         <input type="checkbox" name="remember">
                         <span>Se souvenir</span>
                     </label>
-                    <a href="<?= BASE_URL ?>/contact">Mot de passe oublie ?</a>
+                    <a href="<?= BASE_URL ?>/forgot-password">Mot de passe oublie ?</a>
                 </div>
 
                 <button type="submit" class="btn-primary auth-submit">

@@ -44,6 +44,18 @@ class RapportController extends Controller
         ]);
     }
 
+    public function pdf(): void
+    {
+        $id = (int) $this->input('id');
+
+        $rapport = $this->rapport->findById($id);
+
+        $this->view('rapport/pdf', [
+            'title' => 'Apercu PDF',
+            'rapport' => $rapport
+        ]);
+    }
+
     public function create(): void
     {
         $this->view('rapport/create', [

@@ -30,6 +30,10 @@ $router->get('/login/patient', 'AuthController@loginPatient');
 
 $router->post('/login', 'AuthController@authenticate');
 
+$router->get('/forgot-password', 'AuthController@forgotPassword');
+
+$router->post('/forgot-password', 'AuthController@forgotPassword');
+
 $router->get('/register', 'AuthController@register');
 
 $router->get('/register/admin', 'AuthController@registerAdmin');
@@ -215,6 +219,8 @@ $router->get('/rapport/create', 'RapportController@create');
 $router->post('/rapport/store', 'RapportController@store');
 
 $router->get('/rapport/show', 'RapportController@show');
+
+$router->get('/rapport/pdf', 'RapportController@pdf');
 
 $router->get('/rapport/edit', 'RapportController@edit');
 

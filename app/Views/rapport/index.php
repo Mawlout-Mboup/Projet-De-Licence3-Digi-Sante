@@ -59,7 +59,7 @@ ds_app_start('Rapports medicaux PDF', count($rapports) . ' documents generes', $
                                 <a href="<?= BASE_URL ?>/rapport/show?id=<?= (int) ($rapport['id'] ?? 0) ?>" aria-label="Voir">
                                     <i class="fa-regular fa-eye"></i>
                                 </a>
-                                <a href="<?= BASE_URL ?>/rapport/show?id=<?= (int) ($rapport['id'] ?? 0) ?>" aria-label="Telecharger">
+                                <a href="<?= BASE_URL ?>/rapport/pdf?id=<?= (int) ($rapport['id'] ?? 0) ?>" aria-label="Apercu PDF">
                                     <i class="fa-solid fa-download"></i>
                                 </a>
                                 <a href="<?= BASE_URL ?>/rapport/edit?id=<?= (int) ($rapport['id'] ?? 0) ?>" aria-label="Modifier">

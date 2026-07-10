@@ -1,0 +1,4 @@
+.medecin-page .table-panel,
+.medecin-page .form-panel {
+    min-width: 0;
+}
