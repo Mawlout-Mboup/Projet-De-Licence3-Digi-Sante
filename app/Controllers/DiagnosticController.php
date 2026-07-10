@@ -219,3 +219,4 @@ class DiagnosticController extends Controller
         );
     }
 }
+
