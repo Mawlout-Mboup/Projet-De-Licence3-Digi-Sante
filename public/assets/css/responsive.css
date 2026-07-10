@@ -1,0 +1,130 @@
+@media (max-width: 980px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .topbar-actions,
+    .hero-buttons,
+    .quick-tabs,
+    .profile-actions,
+    .action-links {
+        flex-wrap: wrap;
+    }
+
+    .topbar-actions > *,
+    .hero-buttons > *,
+    .profile-actions > * {
+        max-width: 100%;
+    }
+
+    .panel-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .metric-card,
+    .panel,
+    .form-panel,
+    .chart-card,
+    .patient-summary,
+    .numbered-card,
+    .service-card,
+    .step-card,
+    .role-card {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .btn,
+    .btn-primary,
+    .btn-secondary,
+    .btn-soft,
+    .btn-ghost {
+        width: 100%;
+        min-width: 0;
+        white-space: normal;
+    }
+
+    .quick-tabs a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .metric-card strong,
+    .stats-grid strong {
+        font-size: 26px;
+    }
+
+    .detail-list div,
+    .setting-row,
+    .risk-item {
+        align-items: flex-start;
+        grid-template-columns: 1fr;
+    }
+
+    .risk-dot {
+        display: none;
+    }
+
+    .detail-list div {
+        display: grid;
+    }
+
+    .detail-list dd {
+        text-align: left;
+    }
+
+    .table-panel {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 680px;
+    }
+}
+
+@media (max-width: 420px) {
+    .app-main {
+        padding-inline: 10px;
+    }
+
+    .app-topbar h1 {
+        font-size: 24px;
+    }
+
+    .form-panel,
+    .panel,
+    .chart-card,
+    .profile-card {
+        padding: 16px;
+    }
+
+    input,
+    select,
+    textarea {
+        min-width: 0;
+        padding-inline: 12px;
+    }
+}
+
+@media (min-resolution: 1.5dppx) and (max-width: 900px), (max-width: 640px) {
+    .metrics-grid,
+    .workspace-grid,
+    .split-grid,
+    .chart-grid,
+    .feature-grid-numbered,
+    .service-grid,
+    .steps-grid,
+    .roles-grid,
+    .mission-grid,
+    .mission-cards,
+    .contact-grid,
+    .testimonials-grid,
+    .partners-row,
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
