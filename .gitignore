@@ -1,0 +1,10 @@
+.env
+!.env.example
+.env.local
+.agents/
+/storage/logs/*
+/storage/uploads/*
+/storage/pdf/*
+!.gitkeep
+vendor/
+node_modules/

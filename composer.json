@@ -1,0 +1,13 @@
+{
+    "name": "digi-sante/platform",
+    "description": "Plateforme medicale Digi-Sante",
+    "type": "project",
+    "require": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
